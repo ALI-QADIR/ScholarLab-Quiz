@@ -1,0 +1,19 @@
+animalName,animalSprite,animalDescription,isFlier,isInsect,isOmnivore,isSoloLiver,isMammal
+Ant,Ant,"Ants form colonies that range in size from a few dozen predatory individuals living in small natural cavities to highly organised colonies that may occupy large territories and consist of millions of individuals.",false,true,true,false,false
+Bee,Bee,"Bees are flying insects closely related to wasps and ants; known for their role in pollination and; in the case of the best-known bee species; the western honey bee; for producing honey. They live in colonies and can sting.",true,true,false,false,false
+Bat,Bat,"Bats are mammals of the order Chiroptera. With their forelimbs adapted as wings; they are the only mammals capable of true and sustained flight. They are nocturnal animals.",true,false,true,false,true
+Bear,Bear,"Bears are carnivoran mammals of the family Ursidae. They are classified as caniforms or doglike carnivorans. Although only eight species of bears are extant; they are widespread; appearing in a wide variety of habitats throughout the Northern Hemisphere and partially in the Southern Hemisphere.",false,false,true,true,true
+Sparrow,Sparrow,"Sparrows are a family of small passerine birds. They are also known as true sparrows; or Old World sparrows; names also used for a particular genus of the family; Passer.",true,false,true,true,false
+Beetle,Beetle,"Beetles are a group of insects that form the order Coleoptera.",true,true,true,true,false
+Butterfly,Butterfly,"Butterflies are insects in the macrolepidopteran clade Rhopalocera from the order Lepidoptera; which also includes moths. Adult butterflies have large; often brightly coloured wings; and conspicuous; fluttering flight.",true,true,false,true,false
+Cat,Cat,"The domestic cat is a member of the Felidae family and is one of the most popular pets in the world. Domestic cats are often called house cats when kept as indoor pets.",false,false,true,true,true
+Chicken,Chicken,"The chicken is a type of domesticated fowl; a subspecies of the red junglefowl. It is one of the most common and widespread domestic animals.",false,false,true,false,true
+Clown Fish,Clown Fish,"Clownfish or anemonefish are fishes from the subfamily Amphiprioninae in the family Pomacentridae.",false,false,true,false,false
+Dog,Dog,"The domestic dog is a domesticated descendant of wolves. The dog descended from an ancient wolf ancestor that lived with humans over 15;000 years ago.",false,false,true,true,true
+Cow,Cow,"Cattlecolloquially cowsare domesticated mammals that constitute the genus Bos; and they are most commonly classified collectively as Bos taurus.",false,false,true,false,true
+Deer,Deer,"Deer (singular and plural) are hoofed ruminant mammals forming the family Cervidae. The two main groups of deer are the Cervinae; including muntjac; elk (wapiti); fallow deer and chital; and the Capreolinae; including reindeer (caribou); roe deer and moose.",false,false,true,false,true
+Dragonfly,Dragonfly,"A dragonfly is an insect belonging to the order Odonata.",true,false,true,true,false
+Duck,Duck,"Duck is a common name for numerous species in waterfowl family Anatidae which also includes swans and geese.",true,false,true,false,false
+Falcon,Falcon,"Falcons are birds of prey in the genus Falco which includes about 40 species.",true,false,true,true,false
+Fly,Fly,"True flies are insects of Diptera order which includes house flies; mosquitoes etc.; characterized by having a single pair of wings on their mesothorax and halteres on their metathorax used for balance.",true,true,true,false,false
+Grasshopper,Grasshopper,"Grasshoppers are insects belonging to suborder Caelifera within order Orthoptera. They are herbivorous insects that can jump long distances.",false,true,true,true,false
