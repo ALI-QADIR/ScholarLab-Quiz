@@ -29,65 +29,65 @@ namespace Assets._Scripts.UiElements
             string animalName = _animalButton.GetAnimalName();
             Sprite animalSprite = _animalButton.GetAnimalSprite();
 
-            switch (GameManager.Instance.SortAttribute)
+            switch (GameManager.instance.SortAttribute)
             {
                 case SortAttribute.Flier:
                     if (_bucketValue == _animalButton.GetAnimalAttribute().isFlier)
                     {
-                        GameManager.Instance.IncrementCorrect();
+                        GameManager.instance.IncrementCorrect();
                     }
                     else
                     {
                         animalName += (_animalButton.GetAnimalAttribute().isFlier ? " Flies" : " No Fly");
-                        GameManager.Instance.IncrementIncorrect(animalName, animalSprite);
+                        GameManager.instance.IncrementIncorrect(animalName, animalSprite);
                     }
                     break;
 
                 case SortAttribute.Insect:
                     if (_bucketValue == _animalButton.GetAnimalAttribute().isInsect)
                     {
-                        GameManager.Instance.IncrementCorrect();
+                        GameManager.instance.IncrementCorrect();
                     }
                     else
                     {
                         animalName += (_animalButton.GetAnimalAttribute().isInsect ? " Insect" : " No Insect");
-                        GameManager.Instance.IncrementIncorrect(animalName, animalSprite);
+                        GameManager.instance.IncrementIncorrect(animalName, animalSprite);
                     }
                     break;
 
                 case SortAttribute.Omnivore:
                     if (_bucketValue == _animalButton.GetAnimalAttribute().isOmnivore)
                     {
-                        GameManager.Instance.IncrementCorrect();
+                        GameManager.instance.IncrementCorrect();
                     }
                     else
                     {
                         animalName += (_animalButton.GetAnimalAttribute().isOmnivore ? " Omnivore" : " Herbivore");
-                        GameManager.Instance.IncrementIncorrect(animalName, animalSprite);
+                        GameManager.instance.IncrementIncorrect(animalName, animalSprite);
                     }
                     break;
 
                 case SortAttribute.SoloLiver:
                     if (_bucketValue == _animalButton.GetAnimalAttribute().isSoloLiver)
                     {
-                        GameManager.Instance.IncrementCorrect();
+                        GameManager.instance.IncrementCorrect();
                     }
                     else
                     {
                         animalName += (_animalButton.GetAnimalAttribute().isSoloLiver ? " Lives Alone" : " Lives in a Group");
-                        GameManager.Instance.IncrementIncorrect(animalName, animalSprite);
+                        GameManager.instance.IncrementIncorrect(animalName, animalSprite);
                     }
                     break;
 
                 case SortAttribute.Mammal:
                     if (_bucketValue == _animalButton.GetAnimalAttribute().isMammal)
                     {
-                        GameManager.Instance.IncrementCorrect();
+                        GameManager.instance.IncrementCorrect();
                     }
                     else
                     {
                         animalName += (_animalButton.GetAnimalAttribute().isMammal ? " Mammal" : " Lays Eggs");
-                        GameManager.Instance.IncrementIncorrect(animalName, animalSprite);
+                        GameManager.instance.IncrementIncorrect(animalName, animalSprite);
                     }
                     break;
 

@@ -3,8 +3,14 @@ using UnityEngine;
 
 namespace Assets._Scripts.UiElements
 {
+    /// <summary>
+    /// Represents the info panel in the UI.
+    /// </summary>
     public class InfoPanel : MonoBehaviour
     {
+        /// <summary>
+        /// The instance of the InfoPanel.
+        /// </summary>
         public static InfoPanel Instance;
 
         [SerializeField] private TextMeshProUGUI _animalNameText;
@@ -29,11 +35,19 @@ namespace Assets._Scripts.UiElements
             ScaleInfoPanelDown();
         }
 
+        /// <summary>
+        /// Scales down the info panel.
+        /// </summary>
         public void ScaleInfoPanelDown()
         {
             _isPanelUp = false;
         }
 
+        /// <summary>
+        /// Scales up the info panel and sets the animal name and description.
+        /// </summary>
+        /// <param name="animalName">The name of the animal.</param>
+        /// <param name="animalDescription">The description of the animal.</param>
         public void ScaleInfoPanelUp(string animalName, string animalDescription)
         {
             _animalNameText.text = animalName;

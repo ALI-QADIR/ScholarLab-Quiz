@@ -13,7 +13,7 @@ namespace Assets._Scripts.UiElements
         private void Start()
         {
             CreateAnimalButtons();
-            GameManager.Instance.OnGameStateChanged += OnGameStateChanged;
+            GameManager.instance.OnGameStateChanged += OnGameStateChanged;
         }
 
         private void OnGameStateChanged(GameState gameState)
@@ -48,7 +48,7 @@ namespace Assets._Scripts.UiElements
 
         private void OnDestroy()
         {
-            GameManager.Instance.OnGameStateChanged -= OnGameStateChanged;
+            GameManager.instance.OnGameStateChanged -= OnGameStateChanged;
         }
     }
 }

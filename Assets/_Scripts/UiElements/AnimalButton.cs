@@ -4,6 +4,9 @@ using UnityEngine.EventSystems;
 
 namespace Assets._Scripts.UiElements
 {
+    /// <summary>
+    /// Represents a button that displays an animal.
+    /// </summary>
     public class AnimalButton : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDragHandler
     {
         [SerializeField] private Button _animalButton;
@@ -19,16 +22,32 @@ namespace Assets._Scripts.UiElements
             });
         }
 
+        /// <summary>
+        /// Sets the animal button with the specified scriptable object.
+        /// </summary>
+        /// <param name="animalButtonScriptableObject">The scriptable object representing the animal button.</param>
         public void SetAnimalButton(AnimalButtonSO animalButtonScriptableObject)
         {
             _animalButtonScriptableObject = animalButtonScriptableObject;
             _animalImage.sprite = _animalButtonScriptableObject.animalSprite;
         }
 
+        /// <summary>
+        /// Gets the animal button's scriptable object.
+        /// </summary>
+        /// <returns>The scriptable object representing the animal button.</returns>
         public AnimalButtonSO GetAnimalAttribute() => _animalButtonScriptableObject;
 
+        /// <summary>
+        /// Gets the name of the animal.
+        /// </summary>
+        /// <returns>The name of the animal.</returns>
         public string GetAnimalName() => _animalButtonScriptableObject.animalName;
 
+        /// <summary>
+        /// Gets the sprite of the animal.
+        /// </summary>
+        /// <returns>The sprite of the animal.</returns>
         public Sprite GetAnimalSprite() => _animalButtonScriptableObject.animalSprite;
 
         public void OnBeginDrag(PointerEventData eventData)
