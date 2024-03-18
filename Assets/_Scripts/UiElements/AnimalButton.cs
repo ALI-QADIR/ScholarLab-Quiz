@@ -27,6 +27,10 @@ namespace Assets._Scripts.UiElements
 
         public AnimalButtonSO GetAnimalAttribute() => _animalButtonScriptableObject;
 
+        public string GetAnimalName() => _animalButtonScriptableObject.animalName;
+
+        public Sprite GetAnimalSprite() => _animalButtonScriptableObject.animalSprite;
+
         public void OnBeginDrag(PointerEventData eventData)
         {
             _parentTransform = transform.parent;

@@ -1,5 +1,8 @@
 using System;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace Assets._Scripts.Managers
 {
@@ -19,6 +22,7 @@ namespace Assets._Scripts.Managers
         private int _current = 0;
         private int _correct;
         private int _incorrect;
+        private List<Tuple<string, Sprite>> _incorrectCardNamesAndSpritesTuple = new();
 
         private void Awake()
         {
@@ -34,7 +38,7 @@ namespace Assets._Scripts.Managers
 
         private void Start()
         {
-            UpdateGameState(GameState.Start);
+            GameStartDelay();
         }
 
         private void GameOver()
@@ -54,6 +58,7 @@ namespace Assets._Scripts.Managers
             _current = 0;
             _correct = 0;
             _incorrect = 0;
+            _incorrectCardNamesAndSpritesTuple.Clear();
             // Randomize the sort attribute
         }
 
@@ -67,10 +72,11 @@ namespace Assets._Scripts.Managers
             }
         }
 
-        public void IncrementIncorrect()
+        public void IncrementIncorrect(string cardName, Sprite cardSprite)
         {
             _current++;
             _incorrect++;
+            _incorrectCardNamesAndSpritesTuple.Add(new Tuple<string, Sprite>(cardName, cardSprite));
             if (_current == _total)
             {
                 UpdateGameState(GameState.GameOver);
@@ -97,6 +103,17 @@ namespace Assets._Scripts.Managers
                 default:
                     throw new ArgumentOutOfRangeException();
             }
+        }
+
+        private async void GameStartDelay()
+        {
+            await Task.Delay(20);
+            UpdateGameState(GameState.Start);
+        }
+
+        public Tuple<string, Sprite> GetIncorrectCardNameAndImage(int i)
+        {
+            return _incorrectCardNamesAndSpritesTuple[i];
         }
     }
 

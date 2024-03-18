@@ -26,6 +26,8 @@ namespace Assets._Scripts.UiElements
             _animalButton = eventData.pointerDrag.GetComponent<AnimalButton>();
             _animalButton.SetParent(transform.parent);
             _animalButton.DroppedInBucket();
+            string animalName = _animalButton.GetAnimalName();
+            Sprite animalSprite = _animalButton.GetAnimalSprite();
 
             switch (GameManager.Instance.SortAttribute)
             {
@@ -36,7 +38,8 @@ namespace Assets._Scripts.UiElements
                     }
                     else
                     {
-                        GameManager.Instance.IncrementIncorrect();
+                        animalName += (_animalButton.GetAnimalAttribute().isFlier ? " Flies" : " No Fly");
+                        GameManager.Instance.IncrementIncorrect(animalName, animalSprite);
                     }
                     break;
 
@@ -47,7 +50,8 @@ namespace Assets._Scripts.UiElements
                     }
                     else
                     {
-                        GameManager.Instance.IncrementIncorrect();
+                        animalName += (_animalButton.GetAnimalAttribute().isInsect ? " Insect" : " No Insect");
+                        GameManager.Instance.IncrementIncorrect(animalName, animalSprite);
                     }
                     break;
 
@@ -58,7 +62,8 @@ namespace Assets._Scripts.UiElements
                     }
                     else
                     {
-                        GameManager.Instance.IncrementIncorrect();
+                        animalName += (_animalButton.GetAnimalAttribute().isOmnivore ? " Omnivore" : " Herbivore");
+                        GameManager.Instance.IncrementIncorrect(animalName, animalSprite);
                     }
                     break;
 
@@ -69,7 +74,8 @@ namespace Assets._Scripts.UiElements
                     }
                     else
                     {
-                        GameManager.Instance.IncrementIncorrect();
+                        animalName += (_animalButton.GetAnimalAttribute().isSoloLiver ? " Lives Alone" : " Lives in a Group");
+                        GameManager.Instance.IncrementIncorrect(animalName, animalSprite);
                     }
                     break;
 
@@ -80,7 +86,8 @@ namespace Assets._Scripts.UiElements
                     }
                     else
                     {
-                        GameManager.Instance.IncrementIncorrect();
+                        animalName += (_animalButton.GetAnimalAttribute().isMammal ? " Mammal" : " Lays Eggs");
+                        GameManager.Instance.IncrementIncorrect(animalName, animalSprite);
                     }
                     break;
 
